@@ -14,7 +14,7 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) throws URISyntaxException, InterruptedException {
         BotCore core = new BotCore("127.0.0.1", 6542, 3321530540L);
-
+//测试
         System.out.println("添加菜单组件: " + core.addListener(new MenuListener()));
         System.out.println("添加日志组件: " + core.addListener(new LogListener()));
         System.out.println("添加屏幕截图组件: " + core.addListener(new ScreenListener()));
