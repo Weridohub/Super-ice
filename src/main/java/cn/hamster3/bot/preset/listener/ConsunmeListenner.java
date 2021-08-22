@@ -22,6 +22,11 @@ public class ConsunmeListenner implements Listener {
 
 
     private static Logger logger = Logger.getLogger("家庭");
+    private String money;
+    private String message;
+    private String date;
+    private String riqi;
+    private Long account;
 
     @EventHandler
     public void insetConsume(MessageEvent event) throws Exception{
@@ -31,11 +36,11 @@ public class ConsunmeListenner implements Listener {
         if (!event.getMessage().matches("(.*)用去(.*)")) {
             return;
         }
-        String money=event.getMessage().replaceAll("[\u2E80-\u9FFF]","");
-        String message= event.getMessage();
-        Long name=event.getSender();
-        String date = df.format(new Date());
-        String riqi = rq.format(new Date());
+         money=event.getMessage().replaceAll("[\u2E80-\u9FFF]","");
+         message= event.getMessage();
+         account=event.getSender();
+         date = df.format(new Date());
+         riqi = rq.format(new Date());
 
         //1.加载驱动程序
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -46,10 +51,15 @@ public class ConsunmeListenner implements Listener {
         String purpose =message.replaceAll("用去.*", "");
         System.out.println(purpose);
         String sql="INSERT INTO consunme(name,purpose,money,remarks,dt,spenddt,recorddt) " +
-                "VALUES ('"+name+"', '"+purpose+"', "+money+", NULL, '"+riqi+"', NULL, '"+date+"')";
+                "VALUES ('"+account+"', '"+purpose+"', "+money+", NULL, '"+riqi+"', NULL, '"+date+"')";
         stmt.executeUpdate(sql);//选择import java.sql.ResultSet;
         event.replyIgnoreException("成功消费："+purpose+money+"元");
         stmt.close();
 
+        //借钱
+        if (!event.getMessage().matches("(.*)借(.*)")) {
+            return;
+        }
+        System.out.println("什么人借多少钱");
     }
 }

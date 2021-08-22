@@ -27,6 +27,7 @@ public class Main {
         System.out.println("添加开发进度日志组件: " + core.addListener(new ConsunmeListenner()));
         System.out.println("添加聊天记录组件: " + core.addListener(new MessageListenner()));
         System.out.println("添加撤回监控组件: " + core.addListener(new WithdrawListenner()));
+        System.out.println("添加借还系统: " + core.addListener(new WithdrawListenner()));
 
         core.start();
         try {
