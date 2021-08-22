@@ -1,0 +1,4 @@
+cn/hamster3/bot/test/BotTest.java
+ cn.hamster3.bot.test.BotTest
+ cn.hamster3.bot.test.BotTest$1
+ cn.hamster3.bot.test.BotTest$2
