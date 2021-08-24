@@ -84,7 +84,14 @@ public class MessageUtils {
         object.add("replayInfo", null);
         return object;
     }
-
+    public static JsonObject sendVoiceToGroup(long groupID,String VoicePath) {
+        JsonObject object = new JsonObject();
+        object.addProperty("ToUserUid", groupID);
+        object.addProperty("SendToType", 2);
+        object.addProperty("SendMsgType", "VoiceMsg");
+        object.addProperty("VoicePath", VoicePath);
+        return object;
+    }
     public static JsonObject sendImageToFriend(long qq, String message, URL url) {
         JsonObject object = new JsonObject();
         object.addProperty("toUser", qq);

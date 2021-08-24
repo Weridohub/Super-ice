@@ -100,6 +100,20 @@ public class BotCore {
         connection.getOutputStream().write(data.toString().getBytes(StandardCharsets.UTF_8));
         return JsonParser.parseReader(new InputStreamReader(connection.getInputStream())).getAsJsonObject();
     }
+    public JsonObject sendVoice(JsonObject data) throws IOException {
+        URL url = new URL("http://" + host + ":" + port + "/v1/LuaApiCaller?qq=" + qq + "&funcname=SendMsgV2&timeout=10");
+
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("POST");
+        connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+        connection.setRequestProperty("Charset", "UTF-8");
+        connection.setRequestProperty("Connection", "Keep-Alive");
+        connection.setUseCaches(false);
+
+        connection.setDoOutput(true);
+        connection.getOutputStream().write(data.toString().getBytes(StandardCharsets.UTF_8));
+        return JsonParser.parseReader(new InputStreamReader(connection.getInputStream())).getAsJsonObject();
+    }
 
     /**
      * 发送一条消息，忽略异常抛出

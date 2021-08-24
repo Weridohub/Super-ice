@@ -4,6 +4,7 @@ import cn.hamster3.bot.core.BotCore;
 import cn.hamster3.bot.core.DevConfig;
 import cn.hamster3.bot.listener.Listener;
 import cn.hamster3.bot.preset.listener.*;
+import cn.hamster3.bot.preset.schedule.HourSchedule;
 import cn.hamster3.bot.utils.MessageUtils;
 
 import java.io.IOException;
@@ -12,8 +13,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) throws URISyntaxException, InterruptedException {
+    public static void main(String[] args) throws URISyntaxException, InterruptedException, IOException {
         BotCore core = new BotCore("127.0.0.1", 6542, 3321530540L);
+        HourSchedule schedule = new HourSchedule();
+        schedule.hourSchedule();
+
 //测试
         System.out.println("添加菜单组件: " + core.addListener(new MenuListener()));
         System.out.println("添加日志组件: " + core.addListener(new LogListener()));
@@ -28,6 +32,7 @@ public class Main {
         System.out.println("添加聊天记录组件: " + core.addListener(new MessageListenner()));
         System.out.println("添加撤回监控组件: " + core.addListener(new WithdrawListenner()));
         System.out.println("添加借还系统: " + core.addListener(new WithdrawListenner()));
+
 
         core.start();
         try {
