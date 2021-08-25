@@ -66,7 +66,7 @@ public class BotCore {
         });
         socket.on("OnGroupMsgs", args -> {
             System.out.println(Arrays.toString(args));
-            callEvent(new GroupMessageEvent(this, JsonParser.parseString(args[0].toString()).getAsJsonObject()));
+           // callEvent(new GroupMessageEvent(this, JsonParser.parseString(args[0].toString()).getAsJsonObject()));
         });
         socket.on("OnEvents", args -> {
             System.out.println(Arrays.toString(args));
