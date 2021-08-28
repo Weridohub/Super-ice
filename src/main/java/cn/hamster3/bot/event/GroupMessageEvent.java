@@ -109,7 +109,7 @@ public class GroupMessageEvent extends MessageEvent {
             }
             case VoiceMsg: {
                 JsonObject content = JsonParser.parseString(data.get("Content").getAsString()).getAsJsonObject();
-                message = content.get("message").getAsString();
+                //message = content.get("message").getAsString();
                 tips = content.get("Tips").getAsString();
                 voiceUrl = content.get("Url").getAsString();
                 break;

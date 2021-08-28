@@ -4,6 +4,7 @@ import cn.hamster3.bot.core.BotCore;
 import cn.hamster3.bot.core.DevConfig;
 import cn.hamster3.bot.listener.Listener;
 import cn.hamster3.bot.preset.listener.*;
+import cn.hamster3.bot.preset.schedule.ConsunmeSchedule;
 import cn.hamster3.bot.preset.schedule.HourSchedule;
 import cn.hamster3.bot.utils.MessageUtils;
 
@@ -17,6 +18,8 @@ public class Main {
         BotCore core = new BotCore("127.0.0.1", 6542, 3321530540L);
         HourSchedule schedule = new HourSchedule();
         schedule.hourSchedule();
+        ConsunmeSchedule consunmeSchedule=new ConsunmeSchedule();
+        consunmeSchedule.consunmeSchedule();
 
 //测试
         System.out.println("添加菜单组件: " + core.addListener(new MenuListener()));
