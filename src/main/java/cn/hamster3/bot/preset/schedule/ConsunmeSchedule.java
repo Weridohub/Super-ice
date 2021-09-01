@@ -24,8 +24,8 @@ public class ConsunmeSchedule {
 
         riqi= rq.format(new Date());
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 22); // 控制时
-        calendar.set(Calendar.MINUTE, 30);       // 控制分
+        calendar.set(Calendar.HOUR_OF_DAY, 23); // 控制时
+        calendar.set(Calendar.MINUTE, 1);       // 控制分
         calendar.set(Calendar.SECOND, 0);       // 控制秒
 
         Date time = calendar.getTime();         // 得出执行任务的时间,此处为今天的12：00：00
@@ -39,12 +39,12 @@ public class ConsunmeSchedule {
                 Connection conn = DriverManager.getConnection(URL, NAME, PASSWORD);
                 //3.通过数据库的连接操作数据库，实现增删改查
                 Statement stmt = conn.createStatement();
-                List consunmeList=new ArrayList(); //user表集合
+
 
                 ResultSet rs = stmt.executeQuery("SELECT SUM(money) FROM consunme  WHERE dt=\""+riqi+"\"");//选择import java.sql.ResultSet;
                 //    System.out.println(rs.getString("SUM(money)"));
             while(rs.next()){//如果对象中有数据，就会循环打印出来
-                  consunmeList.add("1");
+
                  // df.format(new Date())为获取当前系统时间
                  core.sendMessage(MessageUtils.sendTextToGroup(646212330, "[ATALL()]"+"\n "+"今日消费统计："+"\n "+"共"+rs.getString("SUM(money)")+"元"));
             }

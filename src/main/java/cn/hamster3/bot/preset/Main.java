@@ -2,11 +2,13 @@ package cn.hamster3.bot.preset;
 
 import cn.hamster3.bot.core.BotCore;
 import cn.hamster3.bot.core.DevConfig;
+import cn.hamster3.bot.core.WeBotCore;
 import cn.hamster3.bot.listener.Listener;
 import cn.hamster3.bot.preset.listener.*;
 import cn.hamster3.bot.preset.schedule.ConsunmeSchedule;
 import cn.hamster3.bot.preset.schedule.HourSchedule;
 import cn.hamster3.bot.utils.MessageUtils;
+import cn.hamster3.bot.utils.WeMessageUtils;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -16,10 +18,11 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) throws URISyntaxException, InterruptedException, IOException {
         BotCore core = new BotCore("127.0.0.1", 6542, 3321530540L);
-        HourSchedule schedule = new HourSchedule();
-        schedule.hourSchedule();
-        ConsunmeSchedule consunmeSchedule=new ConsunmeSchedule();
-        consunmeSchedule.consunmeSchedule();
+        WeBotCore weCore = new WeBotCore("192.168.89.1", 8090);
+//        HourSchedule schedule = new HourSchedule();
+//        schedule.hourSchedule();
+//        ConsunmeSchedule consunmeSchedule=new ConsunmeSchedule();
+//        consunmeSchedule.consunmeSchedule();
 
 //测试
         System.out.println("添加菜单组件: " + core.addListener(new MenuListener()));
@@ -48,6 +51,15 @@ public class Main {
             Thread.sleep(3000);
             System.exit(0);
         }
+        weCore.start();
+      try {
+    weCore.sendWeMessage(WeMessageUtils.sendWeText("20319911178@chatroom","\u8d77\u6765\u55e8"));
 
+    } catch (IOException e) {
+       e.printStackTrace();
+           System.out.println("启动消息发送失败, AQBot已关闭...");
+          Thread.sleep(3000);
+           System.exit(0);
+      }
     }
 }
