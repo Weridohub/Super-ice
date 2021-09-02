@@ -57,10 +57,10 @@ public class WeBotCore {
                 socket.off("connect", this);
             }
         });
-//        socket.on("OnGroupMsgs", args -> {
-//            System.out.println(Arrays.toString(args));
-//            callEvent(new GroupMessageEvent(this, JsonParser.parseString(args[0].toString()).getAsJsonObject()));
-//        });
+      socket.on("EventGroupMsg", args -> {
+          System.out.println(Arrays.toString(args));
+         callEvent(new GroupMessageEvent(this, JsonParser.parseString(args[0].toString()).getAsJsonObject()));
+       });
 
     }
 
@@ -78,7 +78,7 @@ public class WeBotCore {
      */
     public JsonObject sendWeMessage(JsonObject data) throws IOException {
         URL url = new URL("http://" + host + ":" + port);
-
+      //http://127.0.0.1:8090
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
         connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");

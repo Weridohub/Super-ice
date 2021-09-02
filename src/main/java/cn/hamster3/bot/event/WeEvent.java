@@ -3,7 +3,7 @@ package cn.hamster3.bot.event;
 import cn.hamster3.bot.core.WeBotCore;
 import com.google.gson.JsonObject;
 
-public class WeEvent {
+public abstract class WeEvent {
     private WeBotCore weBotCore;
     private JsonObject params;
     private boolean cancelled;

@@ -84,8 +84,19 @@ cn/hamster3/bot/core/BotCore.java
  cn.hamster3.bot.core.BotCore$1
 cn/hamster3/bot/preset/listener/LogListener.java
  cn.hamster3.bot.preset.listener.LogListener
-cn/hamster3/bot/preset/Main.java
- cn.hamster3.bot.preset.Main
 cn/hamster3/bot/preset/schedule/ConsunmeSchedule.java
  cn.hamster3.bot.preset.schedule.ConsunmeSchedule
  cn.hamster3.bot.preset.schedule.ConsunmeSchedule$1
+cn/hamster3/bot/core/WeBotCore.java
+ cn.hamster3.bot.core.WeBotCore
+ cn.hamster3.bot.core.WeBotCore$1
+cn/hamster3/bot/event/WeEvent.java
+ cn.hamster3.bot.event.WeEvent
+cn/hamster3/bot/event/WeSocketConnectedEvent.java
+ cn.hamster3.bot.event.WeSocketConnectedEvent
+cn/hamster3/bot/event/WeSocketRegisteredEvent.java
+ cn.hamster3.bot.event.WeSocketRegisteredEvent
+cn/hamster3/bot/utils/WeMessageUtils.java
+ cn.hamster3.bot.utils.WeMessageUtils
+cn/hamster3/bot/preset/Main.java
+ cn.hamster3.bot.preset.Main

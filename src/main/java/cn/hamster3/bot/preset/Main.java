@@ -18,11 +18,11 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) throws URISyntaxException, InterruptedException, IOException {
         BotCore core = new BotCore("127.0.0.1", 6542, 3321530540L);
-        WeBotCore weCore = new WeBotCore("192.168.89.1", 8090);
+        WeBotCore weCore = new WeBotCore("127.0.0.1", 8090);
 //        HourSchedule schedule = new HourSchedule();
-//        schedule.hourSchedule();
+//        schedule.hourSchedule();//报时模块
 //        ConsunmeSchedule consunmeSchedule=new ConsunmeSchedule();
-//        consunmeSchedule.consunmeSchedule();
+//        consunmeSchedule.consunmeSchedule();//每天统计钱
 
 //测试
         System.out.println("添加菜单组件: " + core.addListener(new MenuListener()));
