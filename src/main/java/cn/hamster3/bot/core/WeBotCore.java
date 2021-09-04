@@ -59,7 +59,7 @@ public class WeBotCore {
         });
       socket.on("EventGroupMsg", args -> {
           System.out.println(Arrays.toString(args));
-         callEvent(new GroupMessageEvent(this, JsonParser.parseString(args[0].toString()).getAsJsonObject()));
+         callEvent(new WeGroupMessageEvent(this, JsonParser.parseString(args[0].toString()).getAsJsonObject()));
        });
 
     }
