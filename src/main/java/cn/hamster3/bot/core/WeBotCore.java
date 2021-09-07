@@ -57,7 +57,7 @@ public class WeBotCore {
                 socket.off("connect", this);
             }
         });
-      socket.on("EventGroupMsg", args -> {
+      socket.on("1", args -> {
           System.out.println(Arrays.toString(args));
          callEvent(new WeGroupMessageEvent(this, JsonParser.parseString(args[0].toString()).getAsJsonObject()));
        });
@@ -84,6 +84,7 @@ public class WeBotCore {
         connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
         connection.setRequestProperty("Charset", "UTF-8");
         connection.setRequestProperty("Connection", "Keep-Alive");
+
         connection.setUseCaches(false);
 
         connection.setDoOutput(true);

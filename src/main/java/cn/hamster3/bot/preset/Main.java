@@ -53,7 +53,7 @@ public class Main {
 //        }
         weCore.start();
       try {
-    weCore.sendWeMessage(WeMessageUtils.sendWeText("20319911178@chatroom","123123"));
+    weCore.sendWeMessage(WeMessageUtils.sendWeText("20319911178@chatroom","启动成功"));
 
     } catch (IOException e) {
        e.printStackTrace();
