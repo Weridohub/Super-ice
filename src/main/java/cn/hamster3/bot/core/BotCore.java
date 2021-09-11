@@ -46,6 +46,7 @@ public class BotCore {
         socket = IO.socket("http://" + host + ":" + port, options);
 
         socket.on("connect", new Emitter.Listener() {
+
             @Override
             public void call(Object... args) {
                 JsonObject object = new JsonObject();

@@ -41,10 +41,11 @@ public class WeBotCore {
         IO.Options options = new IO.Options();
         options.transports = new String[]{"websocket"};
         socket = IO.socket("http://" + host + ":" + port, options);
-
-        socket.on("connect", new Emitter.Listener() {
+        System.out.println(socket);
+        socket.on("", new Emitter.Listener() {
             @Override
             public void call(Object... args) {
+                System.out.println("到这了");
                 JsonObject object = new JsonObject();
                 logger.info("AQBot链接成功: " + object);
                 System.out.println("AQBot链接成功: " + object);
@@ -84,11 +85,10 @@ public class WeBotCore {
         connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
         connection.setRequestProperty("Charset", "UTF-8");
         connection.setRequestProperty("Connection", "Keep-Alive");
-
         connection.setUseCaches(false);
 
         connection.setDoOutput(true);
-        connection.getOutputStream().write(data.toString().getBytes(StandardCharsets.UTF_8));
+        connection.getOutputStream().write(data.toString().getBytes("GBK"));
         return JsonParser.parseReader(new InputStreamReader(connection.getInputStream())).getAsJsonObject();
     }
     public JsonObject sendVoice(JsonObject data) throws IOException {

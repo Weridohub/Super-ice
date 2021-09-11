@@ -82,6 +82,7 @@ public class MessageUtils {
         object.addProperty("groupid", 0);
         object.addProperty("atUser", 0);
         object.add("replayInfo", null);
+        System.out.println("qq上报"+object);
         return object;
     }
     public static JsonObject sendVoiceToGroup(long groupID,String VoicePath) {

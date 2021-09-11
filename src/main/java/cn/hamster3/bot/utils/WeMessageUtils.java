@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 
 @SuppressWarnings("unused")
 public class WeMessageUtils {
+
     public static JsonObject sendWeText(String to_wxid, String msg) {
         return sendWeText(to_wxid, msg,"");
     }
@@ -16,6 +17,7 @@ public class WeMessageUtils {
         object.addProperty("robot_wxid", "wxid_to0pzqv49glc22");
         object.addProperty("group_wxid", group_wxid);
         object.addProperty("member_wxid", "");
+        System.out.println(object);
         return object;
     }
 }
