@@ -10,6 +10,7 @@ import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
 
+import javax.xml.ws.RequestWrapper;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Method;
@@ -43,7 +44,7 @@ public class WeBotCore {
         socket = IO.socket("http://" + host + ":" + port, options);
         System.out.println(socket);
         socket.on("", new Emitter.Listener() {
-            @Override
+            @RequestWrapper
             public void call(Object... args) {
                 System.out.println("到这了");
                 JsonObject object = new JsonObject();

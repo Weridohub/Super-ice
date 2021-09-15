@@ -17,11 +17,11 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) throws URISyntaxException, InterruptedException, IOException {
-          BotCore core = new BotCore("127.0.0.1", 6542, 3321530540L);
-//          HourSchedule schedule = new HourSchedule();
-//         schedule.hourSchedule();//报时模块
-//        ConsunmeSchedule consunmeSchedule = new ConsunmeSchedule();
-//        consunmeSchedule.consunmeSchedule();//每天统计钱
+          BotCore core = new BotCore("36.138.40.84", 6542, 3321530540L);
+        HourSchedule schedule = new HourSchedule();
+       schedule.hourSchedule();//报时模块
+        ConsunmeSchedule consunmeSchedule = new ConsunmeSchedule();
+        consunmeSchedule.consunmeSchedule();//每天统计钱
 //
 ////测试
         System.out.println("添加菜单组件: " + core.addListener(new MenuListener()));
@@ -50,7 +50,7 @@ public class Main {
             Thread.sleep(3000);
             System.exit(0);
         }
-        WeBotCore weCore = new WeBotCore("127.0.0.1", 8090);
+        WeBotCore weCore = new WeBotCore("36.138.40.84", 8090);
         weCore.start();
       try {
 

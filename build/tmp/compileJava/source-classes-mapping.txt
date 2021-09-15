@@ -36,32 +36,8 @@ cn/hamster3/bot/preset/listener/FamilyListener.java
  cn.hamster3.bot.preset.listener.FamilyListener
 cn/hamster3/bot/preset/listener/MenuListener.java
  cn.hamster3.bot.preset.listener.MenuListener
-cn/hamster3/bot/preset/schedule/HourSchedule.java
- cn.hamster3.bot.preset.schedule.HourSchedule
- cn.hamster3.bot.preset.schedule.HourSchedule$1
- cn.hamster3.bot.preset.schedule.HourSchedule$10
- cn.hamster3.bot.preset.schedule.HourSchedule$11
- cn.hamster3.bot.preset.schedule.HourSchedule$12
- cn.hamster3.bot.preset.schedule.HourSchedule$13
- cn.hamster3.bot.preset.schedule.HourSchedule$14
- cn.hamster3.bot.preset.schedule.HourSchedule$15
- cn.hamster3.bot.preset.schedule.HourSchedule$16
- cn.hamster3.bot.preset.schedule.HourSchedule$17
- cn.hamster3.bot.preset.schedule.HourSchedule$18
- cn.hamster3.bot.preset.schedule.HourSchedule$19
- cn.hamster3.bot.preset.schedule.HourSchedule$2
- cn.hamster3.bot.preset.schedule.HourSchedule$20
- cn.hamster3.bot.preset.schedule.HourSchedule$21
- cn.hamster3.bot.preset.schedule.HourSchedule$22
- cn.hamster3.bot.preset.schedule.HourSchedule$23
- cn.hamster3.bot.preset.schedule.HourSchedule$24
- cn.hamster3.bot.preset.schedule.HourSchedule$3
- cn.hamster3.bot.preset.schedule.HourSchedule$4
- cn.hamster3.bot.preset.schedule.HourSchedule$5
- cn.hamster3.bot.preset.schedule.HourSchedule$6
- cn.hamster3.bot.preset.schedule.HourSchedule$7
- cn.hamster3.bot.preset.schedule.HourSchedule$8
- cn.hamster3.bot.preset.schedule.HourSchedule$9
+cn/hamster3/bot/event/WeMessageEvent.java
+ cn.hamster3.bot.event.WeMessageEvent
 cn/hamster3/bot/preset/listener/WeatherListener.java
  cn.hamster3.bot.preset.listener.WeatherListener
 cn/hamster3/bot/event/OtherEvent.java
@@ -89,21 +65,45 @@ cn/hamster3/bot/preset/listener/ConsunmeListenner.java
  cn.hamster3.bot.preset.listener.ConsunmeListenner
 cn/hamster3/bot/preset/listener/WithdrawListenner.java
  cn.hamster3.bot.preset.listener.WithdrawListenner
+cn/hamster3/bot/utils/WeMessageUtils.java
+ cn.hamster3.bot.utils.WeMessageUtils
 cn/hamster3/bot/event/WeEvent.java
  cn.hamster3.bot.event.WeEvent
 cn/hamster3/bot/event/WeSocketConnectedEvent.java
  cn.hamster3.bot.event.WeSocketConnectedEvent
 cn/hamster3/bot/event/WeSocketRegisteredEvent.java
  cn.hamster3.bot.event.WeSocketRegisteredEvent
-cn/hamster3/bot/utils/WeMessageUtils.java
- cn.hamster3.bot.utils.WeMessageUtils
 cn/hamster3/bot/core/WeBotCore.java
  cn.hamster3.bot.core.WeBotCore
  cn.hamster3.bot.core.WeBotCore$1
 cn/hamster3/bot/event/WeGroupMessageEvent.java
  cn.hamster3.bot.event.WeGroupMessageEvent
  cn.hamster3.bot.event.WeGroupMessageEvent$1
-cn/hamster3/bot/event/WeMessageEvent.java
- cn.hamster3.bot.event.WeMessageEvent
 cn/hamster3/bot/preset/Main.java
  cn.hamster3.bot.preset.Main
+cn/hamster3/bot/preset/schedule/HourSchedule.java
+ cn.hamster3.bot.preset.schedule.HourSchedule
+ cn.hamster3.bot.preset.schedule.HourSchedule$1
+ cn.hamster3.bot.preset.schedule.HourSchedule$10
+ cn.hamster3.bot.preset.schedule.HourSchedule$11
+ cn.hamster3.bot.preset.schedule.HourSchedule$12
+ cn.hamster3.bot.preset.schedule.HourSchedule$13
+ cn.hamster3.bot.preset.schedule.HourSchedule$14
+ cn.hamster3.bot.preset.schedule.HourSchedule$15
+ cn.hamster3.bot.preset.schedule.HourSchedule$16
+ cn.hamster3.bot.preset.schedule.HourSchedule$17
+ cn.hamster3.bot.preset.schedule.HourSchedule$18
+ cn.hamster3.bot.preset.schedule.HourSchedule$19
+ cn.hamster3.bot.preset.schedule.HourSchedule$2
+ cn.hamster3.bot.preset.schedule.HourSchedule$20
+ cn.hamster3.bot.preset.schedule.HourSchedule$21
+ cn.hamster3.bot.preset.schedule.HourSchedule$22
+ cn.hamster3.bot.preset.schedule.HourSchedule$23
+ cn.hamster3.bot.preset.schedule.HourSchedule$24
+ cn.hamster3.bot.preset.schedule.HourSchedule$3
+ cn.hamster3.bot.preset.schedule.HourSchedule$4
+ cn.hamster3.bot.preset.schedule.HourSchedule$5
+ cn.hamster3.bot.preset.schedule.HourSchedule$6
+ cn.hamster3.bot.preset.schedule.HourSchedule$7
+ cn.hamster3.bot.preset.schedule.HourSchedule$8
+ cn.hamster3.bot.preset.schedule.HourSchedule$9
